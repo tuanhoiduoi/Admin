@@ -15,7 +15,7 @@ class QuestionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function Quiz( Request $question )
+    public function Quiz(Request $question)
     {
         $question = Question::all();
         return response()->json([

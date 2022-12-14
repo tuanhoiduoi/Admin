@@ -48,6 +48,7 @@ Route::post('sign-out', [SessionsController::class, 'destroy'])->middleware('aut
 Route::get('profile', [ProfileController::class, 'create'])->middleware('auth')->name('profile');
 Route::post('user-profile', [ProfileController::class, 'update'])->middleware('auth');
 Route::group(['middleware' => 'auth'], function () {
+    Route::get('/', function () {return redirect('sign-in');});
 	Route::get('billing', function () {
 		return view('pages.billing');
 	})->name('billing');

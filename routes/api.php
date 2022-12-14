@@ -18,7 +18,7 @@ use App\Http\Controllers\QuestionController;
 
 Route::post('/auth/register',[AuthController::class,'register']);
 Route::post('/auth/login',[AuthController::class,'login']);
-Route::get('/auth/question',[QuestionController::class,'question']);
+Route::get('/auth/question',[QuestionController::class,'Quiz']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
