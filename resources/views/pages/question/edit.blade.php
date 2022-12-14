@@ -18,9 +18,17 @@
             <input type="text" name="correct_answer" id="correct_answer" value="{{$question->correct_answer}}" class="form-control px-1" placeholder="Nhập đáp án C">
         </div>
         <div class="form-group">
-            <label>Đáp án sai</label>
-            <input type="text" name="incorrect_answer" id="incorrect_answer" value="{{$question->incorrect_answer}}" class="form-control px-1" placeholder="Nhập đáp án D">
+            <label>Đáp án sai 1</label>
+            <input type="text" name="incorrect_answer_1" id="incorrect_answer_1" value="{{$question->incorrect_answer_1}}" class="form-control px-1" placeholder="Nhập đáp án D">
         </div>
+        <div class="form-group">
+          <label>Đáp án sai 2</label>
+          <input type="text" name="incorrect_answer_2" id="incorrect_answer_2" value="{{$question->incorrect_answer_2}}" class="form-control px-1" placeholder="Nhập đáp án D">
+      </div>
+      <div class="form-group">
+        <label>Đáp án sai 3</label>
+        <input type="text" name="incorrect_answer_3" id="incorrect_answer_3" value="{{$question->incorrect_answer_3}}" class="form-control px-1" placeholder="Nhập đáp án D">
+    </div>
         <div class="row">
           <div class="mb-3 col-md-6 form-group">
             <label>Lĩnh vực</label>

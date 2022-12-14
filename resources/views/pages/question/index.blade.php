@@ -32,8 +32,8 @@
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $item->category }}</td>
                                         <td>{{ $item->question }}</td>
-                                        <td>{{ $item->correct_answer }}</td>
-                                        <td>{{ $item->incorrect_answer }}</td>
+                                        {{-- <td>{{ $item->correct_answer }}</td>
+                                        <td>{{ $item->incorrect_answer }}</td> --}}
                                         <td>{{ $item->status }}</td>
 
                                         <td>

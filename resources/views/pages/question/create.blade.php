@@ -5,7 +5,7 @@
     <h3>THÊM CÂU HỎI</h3>
   </div>
   <div class="card-body col-md-12">
-      <form action="{{ url('questions') }}" method="post">
+      <form action="{{ url('question') }}" method="post">
         {!! csrf_field() !!}
           <div class="form-group ">
             <label>Nội dung câu hỏi</label>
@@ -16,9 +16,17 @@
               <input type="text" name="correct_answer" id="correct_answer" class="form-control px-1" placeholder="Nhập đáp án A">
           </div>
           <div class="form-group">
-              <label>Đáp án sai </label>
-              <input type="text" name="incorrect_answer" id="incorrect_answer" class="form-control px-1" placeholder="Nhập đáp án A">
+              <label>Đáp án sai 1 </label>
+              <input type="text" name="incorrect_answer_1" id="incorrect_answer_1" class="form-control px-1" placeholder="Nhập đáp án A">
           </div>
+          <div class="form-group">
+            <label>Đáp án sai 2 </label>
+            <input type="text" name="incorrect_answer_2" id="incorrect_answer_2" class="form-control px-1" placeholder="Nhập đáp án A">
+        </div>
+        <div class="form-group">
+          <label>Đáp án sai 3 </label>
+          <input type="text" name="incorrect_answer_3" id="incorrect_answer_3" class="form-control px-1" placeholder="Nhập đáp án A">
+      </div>
           <div class="row">
             <div class="mb-3 col-md-6 form-group">
               <label>Lĩnh vực</label>

@@ -9,19 +9,19 @@
         {!! csrf_field() !!}
           <div class="form-group ">
             <label>Username</label>
-            <input type="text" name="username" id="username" class="form-control px-1" placeholder="tên người dùng">
+            <input type="text" name="tenTK" id="tenTK" class="form-control px-1" placeholder="tài khoản người dùng">
           </div>
           <div class="form-group">
               <label>Email </label>
-              <input type="text" name="email" id="email" class="form-control px-1" placeholder="Email">
+              <input type="text" name="email" id="email" class="form-control px-1" placeholder="Email người dùng">
           </div>
           <div class="form-group">
               <label>Password </label>
-              <input type="text" name="password" id="password" class="form-control px-1" placeholder="Password">
+              <input type="text" name="matKhau" id="matKhau" class="form-control px-1" placeholder="Mat Khau nguoi dung">
           </div>
           <div class="form-group">
             <label>Số dư </label>
-            <input type="text" name="sodu" id="sodu" class="form-control px-1" placeholder="Số dư người dùng">
+            <input type="text" name="soDu" id="soDu" class="form-control px-1" placeholder="Số dư người dùng">
         </div>
         <div class="form-group">
           <label>Điêm</label>

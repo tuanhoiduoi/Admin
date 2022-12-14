@@ -18,7 +18,9 @@ return new class extends Migration
             $table->string('category',200);
             $table->string('question',200);
             $table->string('correct_answer',200);
-            $table->string('incorrect_answer',200);
+            $table->string('incorrect_answer_1',200);
+            $table->string('incorrect_answer_2',200);
+            $table->string('incorrect_answer_3',200);
             $table->integer('status');
             $table->timestamps();
         });

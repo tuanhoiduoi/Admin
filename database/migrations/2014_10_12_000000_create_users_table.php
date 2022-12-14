@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->integer('sodu')->default(0);
             $table->integer('diem')->default(0);
-            $table->integer('role')->default(1);
+            $table->integer('is_admin')->default(1);
             $table->integer('trangthai')->default(1);
             $table->rememberToken();
             $table->timestamps();

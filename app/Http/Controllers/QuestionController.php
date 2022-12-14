@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Models\Question;
 use App\Http\Requests\StoreQuestionRequest;
 use App\Http\Requests\UpdateQuestionRequest;
@@ -14,6 +15,15 @@ class QuestionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function Quiz( Request $question )
+    {
+        $question = Question::all();
+        return response()->json([
+            'question'=>$question
+        ], 200,);
+
+    }
+
     public function index()
     {
         $question = Question::all();
@@ -38,6 +48,7 @@ class QuestionController extends Controller
      */
     public function store(Request $request)
     {
+
         $input = $request->all();
         Question::create($input);
         return redirect('question')->with('thongbao', 'Thêm câu hỏi thành công');

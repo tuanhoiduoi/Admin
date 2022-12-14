@@ -22,6 +22,7 @@ class RegisterController extends Controller
             'username' => $req->username,
              'email' => $req->email,
              'password' => $req->password
+
         ];
         $user = User::create($data);
 
