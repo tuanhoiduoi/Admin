@@ -21,7 +21,8 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
-
+use App\Http\Controllers\QuestionController;
+use App\Http\Controllers\LinhvucController;
 
 Route::get('/', function () {return redirect('sign-in');});
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth')->name('dashboard');
@@ -31,6 +32,11 @@ Route::get('sign-in', [SessionsController::class, 'create'])->middleware('guest'
 Route::post('sign-in', [SessionsController::class, 'store'])->middleware('guest');
 Route::post('verify', [SessionsController::class, 'show'])->middleware('guest');
 Route::post('reset-password', [SessionsController::class, 'update'])->middleware('guest')->name('password.update');
+
+Route::resource("/question", QuestionController::class);
+Route::resource("/linhvuc", LinhvucController::class);
+
+
 Route::get('verify', function () {
 	return view('sessions.password.verify');
 })->middleware('guest')->name('verify');

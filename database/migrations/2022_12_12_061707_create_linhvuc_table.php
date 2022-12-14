@@ -13,7 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('linhvuc', function (Blueprint $table) {
+            $table->id();
+            $table->string('tenlv',200);
+            $table->integer('trangthai');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('linhvuc');
     }
 };
