@@ -13,6 +13,14 @@ class LinhvucController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function linhvuc(Request $linhvuc)
+    {
+        $linhvuc = Linhvuc::all();
+        return response()->json([
+            'linhvuc'=>$linhvuc
+        ], 200,);
+
+    }
     public function index()
     {
         $linhvuc = Linhvuc::all();

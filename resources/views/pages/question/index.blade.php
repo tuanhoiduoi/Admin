@@ -20,8 +20,8 @@
                                         <th>#</th>
                                         <td>Linh Vuc</td>
                                         <th>Noi dung</th>
-                                        <th>Dap An</th>
-                                        <th>Dap An Sai</th>
+                                        {{-- <th>Dap An</th>
+                                        <th>Dap An Sai</th> --}}
                                         <th>Trang Thai</th>
                                         <th>Chuc nang</th>
                                     </tr>
@@ -56,3 +56,16 @@
         </div>
     </div>
 @endsection
+{{-- Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+<div class="bootstrap-pagination">
+    <nav>
+        <ul class="pagination">
+            @for (int i = 1; i <= Model.PageCount; i++)
+            {
+                <li class="page-item">
+                    <a class="page-link" href="/admin/Posts?page=@i">@i</a>
+                </li>
+            }
+        </ul>
+    </nav>
+</div> --}}

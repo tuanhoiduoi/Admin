@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\QuestionController;
+use App\Http\Controllers\LinhvucController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,7 @@ use App\Http\Controllers\QuestionController;
 Route::post('/auth/register',[AuthController::class,'register']);
 Route::post('/auth/login',[AuthController::class,'login']);
 Route::get('/auth/question',[QuestionController::class,'Quiz']);
+Route::get('/auth/linhvuc',[LinhvucController::class,'linhvuc']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
