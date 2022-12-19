@@ -7,6 +7,7 @@ use App\Models\Question;
 use App\Http\Requests\StoreQuestionRequest;
 use App\Http\Requests\UpdateQuestionRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class QuestionController extends Controller
 {
@@ -15,9 +16,9 @@ class QuestionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function Quiz(Request $question)
+    public function Quiz(Request $question,$id)
     {
-        $question = Question::all();
+        $question = DB::table('question')->where('id','=',$id)->get()->toArray();
         return response()->json([
             'question'=>$question
         ], 200,);
