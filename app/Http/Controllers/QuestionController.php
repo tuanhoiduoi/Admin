@@ -18,7 +18,7 @@ class QuestionController extends Controller
      */
     public function Quiz(Request $question,$id)
     {
-        $question = DB::table('question')->where('id','=',$id)->get()->toArray();
+        $question = DB::table('question')->where('category','=',$id)->get()->toArray();
         return response()->json([
             'question'=>$question
         ], 200,);
