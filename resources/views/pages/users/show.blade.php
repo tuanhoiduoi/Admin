@@ -14,9 +14,13 @@
                 <p class="card-text">Password: {{ $users->password }}</p>
                 <p class="card-text">Số Dư: {{ $users->sodu }}</p>
                 <p class="card-text">Điểm: {{ $users->diem }}</p>
-                <p class="card-text">Is_Admin: {{ $users->is_admin }}</p>
+                @if ($users->is_admin == 1)
+                  <p class="card-text">Is_Admin: Yes</p>
+                @else
+                <p class="card-text">Is_Admin: No</p>
+                @endif
 
-                @if ($users->status == 1)
+                @if ($users->trangthai == 1)
                   <p class="card-text">Trạng thái: Hoạt động</p>
                 @else
                 <p class="card-text">Trạng thái: Không hoạt động</p>

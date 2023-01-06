@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class UserController extends Controller
 {
@@ -11,9 +12,18 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function user(Request $user)
+    {
+        $users = User::all();
+        return response()->json([
+            'user'=>$users
+        ], 200,);
+
+    }
     public function index()
     {
-
+        $users = User::all();
+        return view('pages.users.index')->with('users', $users);
     }
 
     /**
@@ -23,7 +33,7 @@ class UserController extends Controller
      */
     public function create()
     {
-
+        return view('pages.users.create');
     }
 
     /**
@@ -34,7 +44,9 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-
+        $input = $request->all();
+        User::create($input);
+        return redirect('users')->with('thongbao', 'Thêm câu hỏi thành công');
     }
 
     /**
@@ -45,7 +57,8 @@ class UserController extends Controller
      */
     public function show($id)
     {
-
+        $users = User::find($id);
+        return view('pages.users.show')->with('users', $users);
     }
 
     /**
@@ -56,7 +69,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-
+        $users = User::find($id);
+        return view('pages.users.edit')->with('users', $users);
     }
 
     /**
@@ -68,7 +82,10 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-
+        $users = User::find($id);
+        $input = $request->all();
+        $users->update($input);
+        return redirect('users')->with('thongbao', 'Cập nhật câu hỏi thành công');
     }
 
     /**
@@ -79,6 +96,7 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-
+        User::destroy($id);
+        return redirect('users')->with('thongbao', 'Xóa câu hỏi thành công');
     }
 }

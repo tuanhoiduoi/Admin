@@ -23,8 +23,9 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\LinhvucController;
+use App\Http\Controllers\UserController;
 
-Route::get('/', function () {return redirect('sign-in');});
+
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth')->name('dashboard');
 Route::get('sign-up', [RegisterController::class, 'create'])->middleware('guest')->name('register');
 Route::post('sign-up', [RegisterController::class, 'store'])->middleware('guest');
@@ -35,6 +36,7 @@ Route::post('reset-password', [SessionsController::class, 'update'])->middleware
 
 Route::resource("/question", QuestionController::class);
 Route::resource("/linhvuc", LinhvucController::class);
+Route::resource("/users", UserController::class);
 
 
 Route::get('verify', function () {
@@ -48,7 +50,7 @@ Route::post('sign-out', [SessionsController::class, 'destroy'])->middleware('aut
 Route::get('profile', [ProfileController::class, 'create'])->middleware('auth')->name('profile');
 Route::post('user-profile', [ProfileController::class, 'update'])->middleware('auth');
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/', function () {return redirect('sign-in');});
+    Route::get('/', function () {return redirect('dashboard');});
 	Route::get('billing', function () {
 		return view('pages.billing');
 	})->name('billing');

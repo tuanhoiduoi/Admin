@@ -33,7 +33,7 @@ class AuthController extends Controller
             'username' => $req->username,
              'email' => $req->email,
              'password' => $req->password,
-             'role'=>0,
+             'is_admin'=>0,
         ];
 
         $user = User::create($data);
@@ -62,4 +62,5 @@ class AuthController extends Controller
         $response = ['message' => 'Sai tên đăng nhập hoặc mật khẩu'];
         return response()->json($response, 400);
     }
+
 }

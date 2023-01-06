@@ -5,7 +5,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h2>Linh Vuc</h2>
+                        <h2>Lĩnh vực</h2>
                     </div>
                     <div class="card-body">
                         <a href="{{ url('/linhvuc/create') }}" class="btn btn-success btn-sm" title="Add New linhvuc">
@@ -17,10 +17,10 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th>
-                                        <td>Ten Linh Vuc</td>
-                                        <th>Trang Thai</th>
-
+                                        <td>id</td>
+                                        <td>Lĩnh vực</td>
+                                        <td>Trạng thái</td>
+                                        <td>Chức năng</td>
                                     </tr>
                                 </thead>
                                 <tbody>

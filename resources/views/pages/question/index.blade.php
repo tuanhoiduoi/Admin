@@ -17,13 +17,13 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th>
-                                        <td>Linh Vuc</td>
-                                        <th>Noi dung</th>
+                                        <td>id</td>
+                                        <td>Lĩnh vực</td>
+                                        <td>Nội dung</td>
                                         {{-- <th>Dap An</th>
                                         <th>Dap An Sai</th> --}}
-                                        <th>Trang Thai</th>
-                                        <th>Chuc nang</th>
+                                        <td>Trạng Thái</td>
+                                        <td>chức năng</td>
                                     </tr>
                                 </thead>
                                 <tbody>

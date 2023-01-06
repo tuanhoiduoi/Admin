@@ -17,13 +17,14 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th>
+                                        <td>id</td>
                                         <td>Username</td>
-                                        <th>email</th>
-                                        <th>Password</th>
-                                        <th>Sodu</th>
-                                        <th>Diem</th>
-                                        <th>Trang thai</th>
+                                        <td>Email</td>
+                                        <td>Admin</td>
+                                        <td>Sodu</td>
+                                        <td>Diem</td>
+                                        <td>Trang thai</td>
+                                        <td>Chức năng</td>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -32,7 +33,7 @@
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $item->username }}</td>
                                         <td>{{ $item->email }}</td>
-                                        <td>{{ $item->password }}</td>
+                                        <td>{{ $item->is_admin }}</td>
                                         <td>{{ $item->sodu }}</td>
                                         <td>{{ $item->diem }}</td>
                                         <td>{{ $item->trangthai }}</td>
