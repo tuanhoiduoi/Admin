@@ -30,11 +30,10 @@
           <div class="row">
             <div class="mb-3 col-md-6 form-group">
               <label>Lĩnh vực</label>
-              <select name="category" id="category" class="form-select px-1">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
+              <select name="category" id="category" class="form-control">
+                <option value="2" style="color: green;">Thể Thao</option>
+                <option value="3" style="color: red;">Tin Học</option>
+                <option value="1" style="color: rgb(0, 123, 255);">Văn Học</option>
               </select>
             </div>
             <div class="mb-3 col-md-6 form-group">

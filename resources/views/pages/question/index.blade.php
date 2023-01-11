@@ -30,11 +30,25 @@
                                 @foreach($question as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->category }}</td>
+                                        <td>
+                                            @if ($item->category==1)
+                                            <span style="color: green;">Văn Học</span>
+                                            @elseif ($item->category==2)
+                                            <span style="color: rgb(110, 221, 238);">Thể Thao</span>
+                                            @else
+                                            <span style="color: red;">Tin Học</span>
+                                            @endif
+                                        </td>
                                         <td>{{ $item->question }}</td>
                                         {{-- <td>{{ $item->correct_answer }}</td>
                                         <td>{{ $item->incorrect_answer }}</td> --}}
-                                        <td>{{ $item->status }}</td>
+                                        <td>
+                                            @if ($item->status==1)
+                                            <span style="color: green;">Hoạt Động</span>
+                                            @else
+                                            <span style="color: red;">Không Hoạt Động</span>
+                                            @endif
+                                            </td></td>
 
                                         <td>
                                             <a href="{{ url('/question/' . $item->id) }}" title="View question"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>

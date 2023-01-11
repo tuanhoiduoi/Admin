@@ -29,7 +29,13 @@
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $item->tenlv }}</td>
 
-                                        <td>{{ $item->trangthai }}</td>
+                                        <td>
+                                            @if ($item->trangthai==1)
+                                            <span style="color: green;">Hoạt Động</span>
+                                            @else
+                                            <span style="color: red;">Không Hoạt Động</span>
+                                            @endif
+                                            </td>
 
                                         <td>
                                             <a href="{{ url('/linhvuc/' . $item->id) }}" title="View linhvuc"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
