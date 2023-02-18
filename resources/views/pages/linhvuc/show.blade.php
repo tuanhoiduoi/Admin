@@ -9,7 +9,7 @@
                   <h3>Lĩnh vực {{ $linhvuc->id }} </h3>
               </div>
               <div class="card-body">
-                <p class="card-text">Tên Lĩnh vực: {{ $linhvuc->tenlv }}</p>
+                <p class="card-text">Thể Loại Sách {{ $linhvuc->tenlv }}</p>
 
                 @if ($linhvuc->trangthai == 1)
                   <p class="card-text">Trạng thái: Hoạt động</p>

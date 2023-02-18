@@ -2,13 +2,13 @@
 @section('content-linhvuc')
 <div class="card">
   <div class="card-header">
-    <h3>THÊM CÂU HỎI</h3>
+    <h3>THÊM SẢN PHẨM</h3>
   </div>
   <div class="card-body col-md-12">
       <form action="{{ url('linhvuc') }}" method="post">
         {!! csrf_field() !!}
           <div class="form-group ">
-            <label>Ten Linh Vuc</label>
+            <label>Sản Phẩm</label>
             <input type="text" name="tenlv" id="tenlv" class="form-control px-1" placeholder="Nhập nội dung ">
           </div>
 

@@ -5,7 +5,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h2>Cau Hoi</h2>
+                        <h2>Sản Phẩm</h2>
                     </div>
                     <div class="card-body">
                         <a href="{{ url('/question/create') }}" class="btn btn-success btn-sm" title="Add New question">
@@ -18,10 +18,8 @@
                                 <thead>
                                     <tr>
                                         <td>id</td>
-                                        <td>Lĩnh vực</td>
-                                        <td>Nội dung</td>
-                                        {{-- <th>Dap An</th>
-                                        <th>Dap An Sai</th> --}}
+                                        <td>Tên Sản Phẩm</td>
+                                        <td>Nhà Xuất Bản</td>
                                         <td>Trạng Thái</td>
                                         <td>chức năng</td>
                                     </tr>
@@ -32,11 +30,11 @@
                                         <td>{{ $loop->iteration }}</td>
                                         <td>
                                             @if ($item->category==1)
-                                            <span style="color: green;">Văn Học</span>
+                                            <span style="color: green;">Truyện </span>
                                             @elseif ($item->category==2)
-                                            <span style="color: rgb(110, 221, 238);">Thể Thao</span>
+                                            <span style="color: rgb(110, 221, 238);">Sách Giáo Khoa</span>
                                             @else
-                                            <span style="color: red;">Tin Học</span>
+                                            <span style="color: red;">Tiểu thuyết</span>
                                             @endif
                                         </td>
                                         <td>{{ $item->question }}</td>

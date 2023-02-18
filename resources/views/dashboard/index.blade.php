@@ -14,7 +14,7 @@
                                 <i class="material-icons opacity-10">weekend</i>
                             </div>
                             <div class="text-end pt-1">
-                                <p class="text-sm mb-0 text-capitalize">Lĩnh vực</p>
+                                <p class="text-sm mb-0 text-capitalize">Sách giáo khoa</p>
                                 <h4 class="mb-0">{{ $totalTopic }}</h4>
                             </div>
                         </div>
@@ -33,7 +33,7 @@
                                 <i class="material-icons opacity-10">person</i>
                             </div>
                             <div class="text-end pt-1">
-                                <p class="text-sm mb-0 text-capitalize">Tổng câu hỏi</p>
+                                <p class="text-sm mb-0 text-capitalize">Dụng cụ học tập</p>
                                 <h4 class="mb-0">{{$totalQuestion}}</h4>
                             </div>
                         </div>

@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('correct_answer',200);
             $table->string('incorrect_answer_1',200);
             $table->string('incorrect_answer_2',200);
-            $table->string('incorrect_answer_3',200);
+            $table->integer('incorrect_answer_3');
             $table->integer('status');
             $table->timestamps();
         });

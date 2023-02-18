@@ -10,7 +10,7 @@
         {!! csrf_field() !!}
         @method("PATCH")
         <div class="form-group ">
-          <label>Ten linh vuc</label>
+          <label>Thể Loại Sách</label>
           <input type="tenlv" name="tenlv" id="linhvuc" value="{{$linhvuc->tenlv}}" class="form-control px-1" >
         </div>
 

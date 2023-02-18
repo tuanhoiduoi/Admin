@@ -5,7 +5,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h2>Lĩnh vực</h2>
+                        <h2>Thể loại</h2>
                     </div>
                     <div class="card-body">
                         <a href="{{ url('/linhvuc/create') }}" class="btn btn-success btn-sm" title="Add New linhvuc">
@@ -18,7 +18,7 @@
                                 <thead>
                                     <tr>
                                         <td>id</td>
-                                        <td>Lĩnh vực</td>
+                                        <td>Thể Loại Sách</td>
                                         <td>Trạng thái</td>
                                         <td>Chức năng</td>
                                     </tr>
@@ -28,7 +28,6 @@
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $item->tenlv }}</td>
-
                                         <td>
                                             @if ($item->trangthai==1)
                                             <span style="color: green;">Hoạt Động</span>
